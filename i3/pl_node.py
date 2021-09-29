@@ -29,11 +29,11 @@ class Node(object):
 class NodeAssn(Node):
     """ generated source for class NodeAssn """
 
-    def __init__(self, id, num):
+    def __init__(self, id, expr):
         """ generated source for method __init__ """
         super(NodeAssn, self).__init__()
         self.id = id
-        self.num = num
+        self.expr = expr
 
     def eval(self, env):
         """ generated source for method eval """
@@ -55,5 +55,13 @@ class NodeStmt(Node):
         """ generated source for method __init__ """
         super(NodeStmt, self).__init__()
         self.assn = assn
+
+class NodeWr(Node): ### This is probaby wrong
+
+    def __init__(self, assn):
+
+        super(NodeWr, self).__init__()
+        self.assn = assn
+        print(Node)
 
 
